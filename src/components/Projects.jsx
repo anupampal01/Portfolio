@@ -4,34 +4,36 @@ import '../index.css'; // Import global styles
 function Projects() {
   const projects = [
     {
-      title: 'Task Manager',
-      image: './c.webp',
+      title: 'Bank Information Management System',
+      image: './c.jpg',
       description:
-        'A productivity app with task creation, deadlines, reminders, priorities, and dashboard analytics.',
+        'Secure banking platform with account management and IFSC search, built using MERN stack.',
+      liveLink: 'https://bank-information-management-system.netlify.app',
+      githubLink: 'https://github.com/anupampal01/Bank-Information-Management-System',
     },
     {
-      title: 'Email Analyzer',
-      image: './e.jpg',
+      title: 'Leaderboard System',
+      image: './b.jpg',
       description:
-        'A tool to detect email spoofing and analyze headers, with SPF, DKIM, and DMARC record validation.',
+        'Real-time leaderboard using MongoDB aggregation for dynamic ranking with user registration and history logs.',
+      liveLink: 'https://leaderboardnew.netlify.app',
+      githubLink: 'https://github.com/anupampal01/leaderboard-system',
     },
     {
-      title: 'E-commerce Website',
-      image: './b.png',
-      description:
-        'A dynamic e-commerce site with product listings, search, secure checkout, payment, and order tracking.',
-    },
-    {
-      title: 'Portfolio Website',
-      image: './d.jpg',
-      description:
-        'A personal portfolio showcasing my skills, projects, contact links, and responsive modern design.',
-    },
-    {
-      title: 'IPO Information Platform',
+      title: 'Topperniti Crash Course Platform',
       image: './a.jpg',
       description:
-        'A MERN-stack web app displaying real-time IPO listings with smart filters, company insights, and RESTful API integration.',
+        'Online crash course platform with admin dashboard, student enrollment, progress tracking, and resource downloads.',
+      liveLink: 'https://learnvantage.netlify.app',
+      githubLink: 'https://github.com/anupampal01/topperniti-crash-course',
+    },
+    {
+      title: 'Email Analyzer Tool',
+      image: './e.jpg',
+      description:
+        'Parses .eml files to analyze email headers for SPF, DKIM, DMARC spoofing detection and generates detailed reports.',
+      liveLink: 'https://email-analyzer.netlify.app',
+      githubLink: 'https://github.com/anupampal01/Email_Analyzer',
     },
   ];
 
@@ -49,6 +51,23 @@ function Projects() {
             <div className="project-card-content">
               <h3>{project.title}</h3>
               <p>{project.description}</p>
+              <p>
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live
+                </a>{' '}
+                |{' '}
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+              </p>
             </div>
           </div>
         ))}
